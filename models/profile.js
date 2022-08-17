@@ -1,30 +1,31 @@
-import mongoose from 'mongoose';
-import { v4 as uuidv4 } from 'uuid'
+import mongoose from "mongoose";
+import { v4 as uuidv4 } from "uuid";
 const ProfileModel = new mongoose.Schema({
   name: {
-    type: String
+    type: String,
   },
   date: {
-    type: Date
+    type: Date,
   },
-  age: {
-    type: Number,
-    default: 0
+  phone: {
+    type: String,
+  },
+  mail: {
+    type: String,
   },
 
   message: {
-    type: String
+    type: String,
   },
   image: {
-    data: Buffer,
-    contentType: String
+    type: String,
   },
   id: {
     type: String,
-    default: () => uuidv4()
-  }
-})
+    default: () => uuidv4(),
+  },
+});
 
-const Profile = mongoose.model('Profile', ProfileModel)
+const Profile = mongoose.model("Profile", ProfileModel);
 
-export default Profile
+export default Profile;
