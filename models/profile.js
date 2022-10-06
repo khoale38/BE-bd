@@ -22,7 +22,7 @@ const ProfileModel = new mongoose.Schema({
   },
   id: {
     type: String,
-    default: () => uuidv4(),
+  
   },
 });
 

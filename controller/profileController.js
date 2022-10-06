@@ -25,6 +25,7 @@ export const postProfile = async (req, res, next) => {
           image: req.body.image,
           phone: req.body.phone,
           mail: req.body.mail,
+          id:req.body.id,
         });
         try {
           await newProfile.save();
